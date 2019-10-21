@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
-
+                finish();
             }
         });
     }
@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Log.d("main","run Apage onStop");
     }
-    //@Override
-    //protected void onDestory(){
-    //    super.onDestroy();
-    //    Log.d("main","run Apage onDestory");
-    //}
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d("main","run Apage onDestory");
+    }
 }
